@@ -1,0 +1,6 @@
+10 Apr 2010 Konstanty Bialkowski <konstanty@ieee.org>
+	* split out players into new package
+	* write new libAO based player (as OSS is not available by default)
+
+11 Apr 2010 Konstanty Bialkowski <konstanty@ieee.org>
+	* write automake/autoconf files for new tree structure

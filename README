@@ -1,0 +1,9 @@
+A few audio playing tools for libmodplug (for the command line).
+
+modplugplay is written for the OSS audio output (/dev/dsp).
+modplug123 uses libAO (from xiph.org) for better cross platform audio support.
+
+Usage:
+
+modplugplay filename1.mod filename2.xm
+modplug123 filename1.mod filename2.xm

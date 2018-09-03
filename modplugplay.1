@@ -1,0 +1,46 @@
+.TH modplugplay 1 "October 4th, 2003"
+.SH NAME
+modplugplay \- a commandline music mod player using libmodplug
+.SH SYNOPSIS
+modplugplay [\fBFILES\fR]
+.SH DESCRIPTION
+modplugplay is a command line player for many music modules
+(669, amf, ams, dbm, dmf, dsm, far, it, j2b, mdl, med mod, mt2,
+mtm, okt, psm, ptm, s3m, stm, ult, umx and xm) using the libmodplug library.
+.SH USAGE
+When you have started modplugplay using some files to play, you can
+control it using following keys
+.IP "\fBl\fP   loop, unloop"
+.IP "\fBp\fP   pause, unpause"
+.IP "\fBr\fP   random song"
+.IP "\fBn\fP   next song"
+.IP "\fBN\fP   previos song"
+.IP "\fB1\fP   11025 hz"
+.IP "\fB2\fP   22050 hz"
+.IP "\fB4\fP   44100 hz"
+.IP "\fB8\fP   8/16 bit"
+.IP "\fBm\fP   mono/stereo"
+.IP "\fBf\fP   forward ten seconds"
+.IP "\fBb\fP   backward ten seconds"
+.IP "\fB+\fP   louder"
+.IP "\fB-\fP   softer"
+.SH EXAMPLES
+You can play your modules in random order using the help of
+randomize-lines, with this command
+.IP "modplugplay `ls|shuf`"
+
+or
+.IP "modplugplay `ls *.mod | iselect -am`"
+.SH SEE ALSO
+.BR modplug123 (1),
+.BR xmp (1),
+.BR schism (1),
+.BR milkytracker (1),
+.BR ocp (1).
+.br
+.SH MUSIC FILES
+.IP http://www.maktone.tk/
+.IP http://www.chiptune.com/
+.IP http://www.chiptune.de/
+.IP http://www.mickrippon.com/
+.IP ftp://ftp.hornet.org/pub/demos/music/contests/
