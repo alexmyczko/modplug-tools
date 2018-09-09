@@ -3,6 +3,7 @@ A few audio playing tools for libmodplug (for the command line).
 modplugplay is written for the OSS audio output (/dev/dsp).
 modplug123 uses libAO (from xiph.org) for better cross platform audio support.
 
+```
 Usage:
 
 modplugplay `find | shuf`               # for OSS
@@ -24,3 +25,4 @@ n - next song
 N - previous song
 r - random song
 f/b - forward/backward 10 seconds
+```
