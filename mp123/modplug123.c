@@ -350,6 +350,7 @@ for (song=0; song<nFiles; song++) {
 	close(audio_fd);
 	// failing to open a song breaks keyboard input control (check if this fixes it)
 	reset_keypress();
+	set_keypress();
 	free(filedata); /* ? */
     } else {
       songsplayed++;
@@ -367,7 +368,6 @@ for (song=0; song<nFiles; song++) {
 //    settings.mBassRange   = 100; /* 10 - 100 hz */ 
 // [REV--DLY--] [SUR--DLY--] [BAS--RNG--]
 // [rev--dly--] [sur--dly--] [bas--rng--]
-
 
     set_keypress();
     strcpy(songname, ModPlug_GetName(f2));
