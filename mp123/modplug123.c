@@ -3,11 +3,11 @@
  * modplug123 by Konstanty Bialkowski - 2010 
  * this interface uses libAO to support a high number of audio output types
  *  based on ao_example.c
- *  modplug code based on modplug play ( gurkan@linuks.mine.nu www.linuks.mine.nu - Copyright (C) 2003 Gürkan Sengün)
+ *  modplug code based on modplug play ( gurkan@phys.ethz.ch - Copyright (C) 2003 Gürkan Myczko)
  **
 commandline interface to modplugxmms library
 gurkan@phys.ethz.ch 
-Copyright (C) 2003 Gürkan Sengün
+Copyright (C) 2003 Gürkan Myczko
 
 TODO
 unlock /dev/dsp when in 'p'ause mode
@@ -348,6 +348,8 @@ for (song=0; song<nFiles; song++) {
     if (!f2) {
 	printf("could not load %s\n", filename);
 	close(audio_fd);
+	// failing to open a song breaks keyboard input control (check if this fixes it)
+	reset_keypress();
 	free(filedata); /* ? */
     } else {
       songsplayed++;
