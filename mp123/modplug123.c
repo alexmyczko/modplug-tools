@@ -6,7 +6,7 @@
  *  modplug code based on modplug play ( gurkan@linuks.mine.nu www.linuks.mine.nu - Copyright (C) 2003 Gürkan Sengün)
  **
 commandline interface to modplugxmms library
-gurkan@linuks.mine.nu www.linuks.mine.nu
+gurkan@phys.ethz.ch 
 Copyright (C) 2003 Gürkan Sengün
 
 TODO
@@ -566,7 +566,7 @@ for (song=0; song<nFiles; song++) {
     reset_keypress();
     ModPlug_Unload(f2);
     ao_close(device);
-    fprintf(stderr, "Closing audio device.\n");
+    // fprintf(stderr, "Closing audio device.\n");
     free(filedata);
     } /* valid module */
     
