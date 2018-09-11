@@ -27,13 +27,29 @@ Show version of program.
 .B \-l
 Start in loop mode.
 .B \-ao <audio output driver> 
-Use specific libAO output driver, eg. -ao wav (file writing to output.wav)
+Use specific libAO output driver, eg. -ao wav (file writing to output.wav) or alsa
+.SH USAGE
+When you have started modplugplay using some files to play, you can
+control it using following keys
+.IP "\fBl\fP   loop, unloop"
+.IP "\fBp\fP   pause, unpause"
+.IP "\fBr\fP   random song"
+.IP "\fBn\fP   next song"
+.IP "\fBN\fP   previous song"
+.IP "\fB1\fP   11025 hz"
+.IP "\fB2\fP   22050 hz"
+.IP "\fB4\fP   44100 hz"
+.IP "\fB8\fP   8/16 bit"
+.IP "\fBm\fP   mono/stereo"
+.IP "\fBf\fP   forward ten seconds"
+.IP "\fBb\fP   backward ten seconds"
+.IP "\fB+\fP   louder"
+.IP "\fB-\fP   softer"
 .SH SEE ALSO
 .BR modplugplay (1),
 .BR xmp (1),
 .BR schism (1),
 .BR milkytracker (1),
 .BR ocp (1).
-.br
-.SH AUTHOR
+.br.SH AUTHOR
 modplug123 was written by Konstanty Bialkowski.
