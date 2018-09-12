@@ -1,3 +1,6 @@
+/* run it interactively with tcc
+   #!/usr/bin/tcc -run -lmodplug -lao
+*/
 
 /*
  * modplug123 by Konstanty Bialkowski - 2010 
