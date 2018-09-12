@@ -354,20 +354,6 @@ for (song=0; song<nFiles; song++) {
 	free(filedata); /* ? */
     } else {
       songsplayed++;
-/*    settings.mFlags=MODPLUG_ENABLE_OVERSAMPLING | \
-                    MODPLUG_ENABLE_NOISE_REDUCTION | \
-		    MODPLUG_ENABLE_REVERB | \
-		    MODPLUG_ENABLE_MEGABASS | \
-		    MODPLUG_ENABLE_SURROUND;*/
-
-//    settings.mReverbDepth = 100; /* 0 - 100 */ *   [REV--DLY--]
-//    settings.mReverbDelay = 200; /* 40 - 200 ms  00-FF */ 
-//    settings.mSurroundDepth = 100; /* 0 - 100 */   [SUR--DLY--]
-//    settings.mSurroundDelay = 40; /* 5 - 40 ms */  
-//    settings.mBassAmount  = 100; /* 0 - 100 */     [BAS--RNG--]
-//    settings.mBassRange   = 100; /* 10 - 100 hz */ 
-// [REV--DLY--] [SUR--DLY--] [BAS--RNG--]
-// [rev--dly--] [sur--dly--] [bas--rng--]
 
     set_keypress();
     strcpy(songname, ModPlug_GetName(f2));
@@ -450,57 +436,6 @@ for (song=0; song<nFiles; song++) {
 			printf("\n");
 		    } */
 
-/*
-		    if (buffer[0]=='a') {
-			rev++; settings.mReverbDepth=rev;
-			ModPlug_SetSettings(&settings);
-		    }
-		    if (buffer[0]=='A') {
-			rev--; settings.mReverbDepth=rev;
-			ModPlug_SetSettings(&settings);
-		    }
-		    if (buffer[0]=='s') {
-			revdly++; settings.mReverbDelay=revdly;
-			ModPlug_SetSettings(&settings);
-		    }
-		    if (buffer[0]=='S') {
-			revdly--; settings.mReverbDelay=revdly;
-			ModPlug_SetSettings(&settings);
-		    }
-		    if (buffer[0]=='d') {
-			sur++; settings.mSurroundDepth=sur;
-			ModPlug_SetSettings(&settings);
-		    }
-		    if (buffer[0]=='D') {
-			sur--; settings.mSurroundDepth=sur;
-			ModPlug_SetSettings(&settings);
-		    }
-		    if (buffer[0]=='y') {
-			surdly++; settings.mSurroundDelay=surdly;
-			ModPlug_SetSettings(&settings);
-		    }
-		    if (buffer[0]=='Y') {
-			surdly--; settings.mSurroundDelay=surdly;
-			ModPlug_SetSettings(&settings);
-		    }
-		    if (buffer[0]=='x') {
-			bas++; settings.mBassAmount=bas;
-			ModPlug_SetSettings(&settings);
-		    }
-		    if (buffer[0]=='X') {
-			bas--; settings.mBassAmount=bas;
-			ModPlug_SetSettings(&settings);
-		    }
-		    if (buffer[0]=='c') {
-			basrng++; settings.mBassRange=basrng;
-			ModPlug_SetSettings(&settings);
-		    }
-		    if (buffer[0]=='C') {
-			basrng--; settings.mBassRange=basrng;
-			ModPlug_SetSettings(&settings);
-		    }
-*/
-		    
 		    if (buffer[0]=='n') {
 			if (song<argc) { mlen=0; pause=0; }
 		    }
