@@ -10,16 +10,12 @@ gurkan@phys.ethz.ch
 Copyright (C) 2003 Gürkan Myczko
 
 TODO
-unlock /dev/dsp when in 'p'ause mode
-and have a look at SNDCTL_DSP_GETxPTR
 more functions
 sig handling
 12:23 < tp76> tarzeau: yes. I prefer `T *foo = malloc (N * sizeof *foo);'.
 use stat() to get filesize
 run indent -kr
 
-14:08 < tarzeau> so the player isn't stuck when anotehr thing is using /dev/dsp
-14:08 < tarzeau> if that works a msg is displayed
 14:08 < tarzeau> later the song is tried to be opened
 14:08 < tarzeau> then the soundcard settings are set
 14:09 < tarzeau> the the module is load using libmodplug
