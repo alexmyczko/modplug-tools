@@ -73,21 +73,17 @@ command line option handling
 #include <string.h>			/* strcpy */
 #include <stdlib.h>			/* srand/rand */
 #include <unistd.h>
-#include <libmodplug/modplug.h>			/* core */
+#include <libmodplug/modplug.h>		/* core */
 #include <sys/ioctl.h>			/* control device */
 #include <fcntl.h>
 
 #include <ao/ao.h>
-
 #include <sys/time.h>			/* gettimeofday */
 #include <time.h>
 #include <sys/poll.h>			/* poll for keyboard input */
 #include <termios.h>			/* needed to get terminal size */
 
-
-
 #define VERSION "0.5.3"
-
 #define BUF_SIZE 4096
 
 static struct termios stored_settings;
@@ -273,7 +269,7 @@ int main(int argc, char* argv[])
     format.channels = 2;
     format.rate = 44100;
     format.byte_format = AO_FMT_LITTLE;
-//	printf("Default driver = %i\n", default_driver);
+    // printf("Default driver = %i\n", default_driver);
 
     char buffer[128];
     int result, nread;
@@ -289,14 +285,6 @@ int main(int argc, char* argv[])
     /* what about N if the previous song is not playable? */
     /* maybe mark it played in randplayed */
 
-    // [rev--dly--] [sur--dly--] [bas--rng--]
-    int rev=0;    // a
-    int revdly=0; // s
-    int sur=0;    // d
-    int surdly=0; // y
-    int bas=0;    // x
-    int basrng=0; // c
-
     /* Initialize pollfds; we're looking at input, stdin */
     pollfds.fd = 0;             /* stdin */
     pollfds.events = POLLIN;    /* Wait for input */
@@ -306,13 +294,11 @@ int main(int argc, char* argv[])
     }
 
     if (!get_term_size(STDIN_FILENO,&terminal)) {
-	fprintf(stderr,"warning: failed to get terminal size\n");
+	fprintf(stderr,"Warning: failed to get terminal size\n");
     }
-    
     srand(time(NULL));
 
 for (song=0; song<nFiles; song++) {
-
     char *filename = argv[fnOffset[song]];
 
 /* -- Open driver -- */
@@ -345,7 +331,7 @@ for (song=0; song<nFiles; song++) {
 
     f2 = ModPlug_Load(filedata, size);
     if (!f2) {
-	printf("could not load %s\n", filename);
+	printf("Could not load %s\n", filename);
 	close(audio_fd);
 	// failing to open a song breaks keyboard input control (check if this fixes it)
 	reset_keypress();
@@ -384,7 +370,7 @@ for (song=0; song<nFiles; song++) {
     	    }
 	    /*printf("%d %d\n",mlen,len);*/
         }
-        printf(status,tv.tv_sec-tvstart.tv_sec-tvptotal.tv_sec,tv.tv_usec/100000,format.rate,format.channels,settings.mBits/*,rev,revdly,sur,surdly,bas,basrng*/);
+        printf(status,tv.tv_sec-tvstart.tv_sec-tvptotal.tv_sec,tv.tv_usec/100000,format.rate,format.channels,settings.mBits);
 	fflush(stdout);
 
 	if ((mlen==0) && (loop==1)) {
