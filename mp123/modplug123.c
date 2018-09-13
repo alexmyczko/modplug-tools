@@ -278,6 +278,7 @@ int main(int argc, char* argv[])
     int pause=0;
     int mono=0;
     int bits=0;
+    int renderwav=0;            /* render mode? */
     int song;
     int millisecond;
     char *randplayed; /* randomly played songs
@@ -301,9 +302,16 @@ int main(int argc, char* argv[])
 for (song=0; song<nFiles; song++) {
     char *filename = argv[fnOffset[song]];
 
+    filedata = getFileData(filename, &size);
+    if (filedata == NULL) {
+        printf("%s [%d/%d] [Can't open]\n", filename,song+1,nFiles);
+        continue;
+    }
+
 /* -- Open driver -- */
     if (default_driver == ao_driver_id("wav")) {
         device = ao_open_file(default_driver, "output.wav", 1, &format, NULL /*no options*/);
+	renderwav = 1;
     } else {
         device = ao_open_live(default_driver, &format, NULL /* no options */);
     }
@@ -314,9 +322,6 @@ for (song=0; song<nFiles; song++) {
     }
     printf("%s ",filename);
     printf("[%d/%d]",song+1,nFiles);
-
-    filedata = getFileData(filename, &size);
-    if (filedata == NULL) continue;
     printf(" [%ld]\n",size);
 
     // Note: All "Basic Settings" must be set before ModPlug_Load.
@@ -351,8 +356,9 @@ for (song=0; song<nFiles; song++) {
         strncpy(songname,st,41);
         songname[41] = 0;
     }
-    sprintf(status,"[1Gplaying %s (%%d.%%d/%d\") (%%d/%%d/%%d)    \b\b\b\b",songname,ModPlug_GetLength(f2)/1000);
-    if (loop) sprintf(status,"[1Glooping %s (%%d.%%d/%d\") (%%d/%%d/%%d)    \b\b\b\b",songname,ModPlug_GetLength(f2)/1000);
+    sprintf(status,"\033[1Gplaying %s (%%d.%%d/%d\") (%%d/%%d/%%d)    \b\b\b\b",songname,ModPlug_GetLength(f2)/1000);
+    if (loop) sprintf(status,"\033[1Glooping %s (%%d.%%d/%d\") (%%d/%%d/%%d)    \b\b\b\b",songname,ModPlug_GetLength(f2)/1000);
+    if (renderwav) sprintf(status,"\033[1Grendering %s (%%d.%%d/%d\") (%%d/%%d/%%d)    \b\b\b\b",songname,ModPlug_GetLength(f2)/1000);
 
     gettimeofday(&tvstart,NULL);
     tvptotal.tv_sec=tvptotal.tv_usec=0;
