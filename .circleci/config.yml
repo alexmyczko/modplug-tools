@@ -5,7 +5,6 @@ jobs:
       - image: gcc:8
     steps:
       - run: apt-get update && apt-get install -y libopenmpt-modplug-dev libao-dev tcc
-      - run: git clone https://github.com/alexmyczko/modplug-tools.git
-      - run: git clone https://github.com/alexmyczko/modplug-tools.git && cd modplug-tools && git checkout $CIRCLE_BRANCH
-      - run: cd modplug-tools && make CC=gcc
+      - run: git clone https://github.com/alexmyczko/modplug-tools.git && cd modplug-tools
+      - run: cd modplug-tools && ./configure && make CC=gcc
       
