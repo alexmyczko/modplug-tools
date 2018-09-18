@@ -2,6 +2,8 @@
    #!/usr/bin/tcc -run -lmodplug -lao
 */
 
+CIRCLECITEST
+
 /*
  * modplug123 by Konstanty Bialkowski - 2010 
  * this interface uses libAO to support a high number of audio output types
