@@ -1,4 +1,4 @@
- [![CircleCI Build Status](https://circleci.com/gh/alexmyczko/modplug-tools.svg?style=shield)]
+![modplug-tools Build Status](https://circleci.com/gh/alexmyczko/modplug-tools.svg?style=shield)
 
 A few audio playing tools for libopenmpt-modplug-dev or libmodplug-dev (for the command line).
 
