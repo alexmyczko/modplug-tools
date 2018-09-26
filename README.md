@@ -1,3 +1,6 @@
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/fd91d2aec66d4bf6b35e6d9b3f1ccc76)](https://app.codacy.com/app/alexmyczko/modplug-tools?utm_source=github.com&utm_medium=referral&utm_content=alexmyczko/modplug-tools&utm_campaign=Badge_Grade_Dashboard)
+
 ![modplug-tools Build Status](https://circleci.com/gh/alexmyczko/modplug-tools.svg?style=shield)
 
 A few audio playing tools for libopenmpt-modplug-dev or libmodplug-dev (for the command line).
