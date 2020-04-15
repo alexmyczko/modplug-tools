@@ -24,10 +24,10 @@ FILENAME [SONG/TOTALSONGS] [SIZE]
 STATUS TITLE (POSITION/TOTALPLAYTIME") (bitrate/stereo/bits)
 
 Keyboard control:
-l - toggle loop play a song
-p - toggle pause playing
-n - next song
-N - previous song
-r - random song
-f/b - forward/backward 10 seconds
+<kbd>l</kbd> - toggle loop play a song
+<kbd>p</kbd> - toggle pause playing
+<kbd>n</kbd> - next song
+<kbd>N</kbd> - previous song
+<kbd>r</kbd> - random song
+<kbd>f</kbd> / <kbd>b</kbd> - forward/backward 10 seconds
 ```
