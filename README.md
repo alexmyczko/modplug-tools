@@ -3,6 +3,8 @@
 
 ![modplug-tools Build Status](https://circleci.com/gh/alexmyczko/modplug-tools.svg?style=shield)
 
+[![Packaging status](https://repology.org/badge/vertical-allrepos/modplug-tools.svg)](https://repology.org/project/modplug-tools/versions)
+
 A few audio playing tools for libopenmpt-modplug-dev or libmodplug-dev (for the command line).
 
 modplugplay is written for the OSS audio output (/dev/dsp).
