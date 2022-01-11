@@ -88,7 +88,7 @@ command line option handling
 
 static struct termios stored_settings;
 int audio_fd, mixer_fd;
-unsigned char audio_buffer[BUF_SIZE];
+char audio_buffer[BUF_SIZE];
 
 typedef struct {
 	int x, y;
@@ -215,7 +215,7 @@ int main(int argc, char* argv[])
     struct timeval tvpause, tvunpause;
     struct timeval tvptotal;
     char status[161];
-    char songname[41];
+    char songname[42];
     char notpaus[4];
 
     int loop=0; // kontest
