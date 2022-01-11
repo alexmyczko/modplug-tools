@@ -1,3 +1,6 @@
+11 Jan 2022 Alex Myczko <tar@debian.org
+        * Replace autoconf/automake build system with cmake (now can be built on macOS)
+
 10 Apr 2010 Konstanty Bialkowski <konstanty@ieee.org>
 	* split out players into new package
 	* write new libAO based player (as OSS is not available by default)
