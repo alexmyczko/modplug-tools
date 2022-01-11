@@ -3,6 +3,8 @@ project(modplug123)
 
 add_executable(modplug123 modplug123.c)
 
+install(TARGETS modplug123 DESTINATION bin)
+
 OPTION(OPENMPT-MODPLUG "Link against openmpt-modplug." OFF)
 
 find_package(PkgConfig)
