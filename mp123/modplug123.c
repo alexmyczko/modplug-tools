@@ -235,7 +235,7 @@ int main(int argc, char* argv[])
     ao_initialize();
     default_driver = ao_default_driver_id();
     if (default_driver == -1) {
-	 printf("Could not open audio device.");
+	 printf("Could not open audio device.\n");
 	 exit (1);
     }
 
@@ -253,6 +253,10 @@ int main(int argc, char* argv[])
         continue;
       } else if (strstr(argv[i],"-ao")) {
         default_driver = ao_driver_id(argv[++i]);
+        if (default_driver == -1) {
+            printf("Could not open audio device.\n");
+            exit (1);
+        }
         continue;
       }
       if (argv[i][1] == '-') { // not a song
