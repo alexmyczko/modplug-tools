@@ -31,3 +31,7 @@ Keyboard control:
 <kbd>r</kbd> - random song
 
 <kbd>f</kbd> / <kbd>b</kbd> - forward/backward 10 seconds
+
+Find a lot of music at
+
+- http://artscene.textfiles.com/music/
