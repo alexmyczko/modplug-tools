@@ -6,7 +6,7 @@
  * modplug123 by Konstanty Bialkowski - 2010 
  * this interface uses libAO to support a high number of audio output types
  *  based on ao_example.c
- *  modplug code based on modplug play ( gurkan@phys.ethz.ch - Copyright (C) 2003 Gürkan Myczko)
+ *  modplug code based on modplug play ( alex@aiei.ch - Copyright (C) 2003 Alex Myczko)
  **
 commandline interface to modplugxmms library
 gurkan@phys.ethz.ch 
