@@ -9,8 +9,8 @@
  *  modplug code based on modplug play ( alex@aiei.ch - Copyright (C) 2003 Alex Myczko)
  **
 commandline interface to modplugxmms library
-gurkan@phys.ethz.ch 
-Copyright (C) 2003 Gürkan Myczko
+tar@debian.org 
+Copyright (C) 2003 Alex Myczko
 
 TODO
 more functions
