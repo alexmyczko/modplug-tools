@@ -155,14 +155,14 @@ void ansi_cursor(int visible)
 void versioninfo()
 {
 	printf("\nmodplug123 - libAO based console player - Konstanty Bialkowski");
-	printf("Based on modplugplay - Copyright (C) 2003 Gürkan Myczko\n");
+	printf("Based on modplugplay - Copyright (C) 2003 Alex Myczko\n");
 	printf("Version %s compiled on %s at %s.\n",VERSION,__DATE__,__TIME__);
 }
 
 void help(char *s, int exitcode)
 {
 	printf("modplug123 - libAO based console player - Konstanty Bialkowski\n");
-	printf("Based on modplugplay Copyright (C) 2003 Gürkan Myczko\n");
+	printf("Based on modplugplay Copyright (C) 2003 Alex Myczko\n");
         printf("Version %s compiled on %s at %s.\n",VERSION,__DATE__,__TIME__);
 	printf("\n");
 	if (exitcode!=0)
